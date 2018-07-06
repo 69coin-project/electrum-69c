@@ -1,0 +1,6 @@
+[submodule "contrib/deterministic-build/electrum-69c-icons"]
+	path = contrib/deterministic-build/electrum-69c-icons
+	url = https://github.com/pooler/electrum-69c-icons
+[submodule "contrib/deterministic-build/electrum-69c-locale"]
+	path = contrib/deterministic-build/electrum-69c-locale
+	url = https://github.com/pooler/electrum-69c-locale

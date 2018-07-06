@@ -1,0 +1,23 @@
+name: electrum-69c
+version: master
+summary: kh69coin thin client
+description: |
+  Lightweight kh69coin client
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: strict
+
+apps:
+  electrum-69c:
+    command: desktop-launch electrum-69c
+    plugs: [network, network-bind, x11, unity7]
+
+parts:
+  electrum-69c:
+    source: .
+    plugin: python
+    python-version: python3
+    stage-packages: [python3-pyqt5]
+    build-packages: [pyqt5-dev-tools]
+    install: pyrcc5 icons.qrc -o $SNAPCRAFT_PART_INSTALL/lib/python3.5/site-packages/electrum_69c_gui/qt/icons_rc.py
+    after: [desktop-qt5]

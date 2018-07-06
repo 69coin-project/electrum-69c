@@ -1,0 +1,21 @@
+# If you want Electrum to appear in a Linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum-69c.desktop
+
+[Desktop Entry]
+Comment=Lightweight kh69coin Client
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\" electrum-69c %u"
+GenericName[en_US]=kh69coin Wallet
+GenericName=kh69coin Wallet
+Icon=electrum-69c
+Name[en_US]=Electrum kh69coin Wallet
+Name=Electrum kh69coin Wallet
+Categories=Finance;Network;
+StartupNotify=false
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/kh69coin;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\" electrum-69c --testnet %u"
+Name=Testnet mode
